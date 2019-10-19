@@ -26,7 +26,8 @@
                     <a class='nav-link' href='/MVC/view/layout/about.php'>About</a>
                 </li>
 
-                <?php session_start();
+
+                <?php $x=session_start();
 
                 if ((isset($_SESSION["login"]))) {
                     echo "
