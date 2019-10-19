@@ -1,10 +1,8 @@
-<?php include "../view/layout/header.php" ?>
-<h1 style="margin-top: 200px">
-    <?php echo "h1 hello <br>";
-    include "../database/Database.php";
-    $connect_db= new Database();
-    $connect_db->connect();
-    ?>
+<?php //include "../view/layout/header.php"
 
-</h1>
-<?php include "../view/layout/footer.php" ?>
+header('Location: /MVC/view/login/login.php');
+
+?>
+
+<?php //include "../view/login/login.php";?>
+<?php //include "../view/layout/footer.php" ?>
