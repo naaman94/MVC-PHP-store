@@ -19,8 +19,11 @@ if (isset($_POST['login'])) {
             $_SESSION["login"] = $username_from;
             header('Location: /MVC/view/prodect/index.php');
         }
+        else {
+            $message = "Password is incorrect";
+        }
     } else {
-        $message = "Username or Password is incorrect";
+        $message = "Username is incorrect";
     }
 }
 
@@ -50,7 +53,7 @@ if (isset($_POST['login'])) {
 
                         <?php
                         if ($message !== "") {
-                            echo '<label class="text-danger">' . $message . '</label>';
+                            echo '<p class="text-danger">' . $message . '</p>';
                         }
                         ?>
 

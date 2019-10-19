@@ -10,6 +10,8 @@ if (empty($_POST['first_name'])) {
     $last_name = "";
     $username_from = "";
     $email_form = "";
+    $password_from = "";
+    $repeat_password = "";
     $message_password = "";
     $message_username = "";
 }
@@ -20,7 +22,7 @@ if (isset($_POST['sign_up'])) {
     $last_name = $_POST['last_name'];
     $username_from = $_POST['username'];
     $email_form = $_POST['email_form'];
-    $password_from = $_POST['password'];
+    $password_from = $_POST['$password_from'];
     $repeat_password = $_POST['repeat_password'];
     $message_password = "";
     $message_username = "";
@@ -31,6 +33,8 @@ if (isset($_POST['sign_up'])) {
         $message_password = "";
     } else {
         $message_password = "Password not Match";
+        $password_from = "";
+        $repeat_password = "";
     }
 
     if (count($check_user) === 0) {
@@ -96,15 +100,15 @@ if (isset($_POST['sign_up'])) {
                             </div>
 
                             <div class="input-group mb-3">
-                                <input required type="password" class="form-control" name="password"
-                                       placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+                                <input required type="password" class="form-control" name="$password_from"
+                                       value="<?php echo $password_from ?>"   placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
                             </div>
 
 
                             <div class="input-group mb-3">
                                 <input required type="password" class="form-control" name="repeat_password"
                                        placeholder="Repeat Password" aria-label="Repeat Password"
-                                       aria-describedby="basic-addon1">
+                                       aria-describedby="basic-addon1" value="<?php echo $repeat_password ?>">
                             </div>
 
                             <hr class="my-4">

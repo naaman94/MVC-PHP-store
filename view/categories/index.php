@@ -1,5 +1,12 @@
 <?php include "../layout/header.php" ;?>
-<a  style="margin:  100px 100px 20px 350px " class="btn btn-primary" href="/MVC/view/categories/create_category.php">Create New catyegory</a>
-<?php include "table.php" ;?>
+<?php
+if ((isset($_SESSION["login"])))
+{
+    echo "<a  style=' margin: 100px 0px 20px 200px' class='btn btn-primary' href='/MVC/view/categories/create_category.php'>Create New catyegory</a>";
+    include "table.php" ;
+}else{
+    echo "<h1  style=' margin-top: 100px; text-align: center'>You should Login first</h1> ";
 
-<?php include "../layout/footer.php" ?>
+}
+include "../layout/footer.php" ?>
+
