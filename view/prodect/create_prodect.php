@@ -9,7 +9,7 @@ $cat = new Category();
 
 
 if (isset($_POST["submit"])) {
-    echo $_POST["name"] . " " . $_POST["description"] . " " . $_POST["price"] . " " . $_POST["catigory"] . "<br>";
+//    echo $_POST["name"] . " " . $_POST["description"] . " " . $_POST["price"] . " " . $_POST["catigory"] . "<br>";
     $create_new_product = new Product();
     $create_new_product->create($_POST["name"], $_POST["description"], $_POST["price"], $_POST["catigory"], $conn);
     header('Location: /MVC/view/prodect/index.php');

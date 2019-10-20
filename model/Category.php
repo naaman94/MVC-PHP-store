@@ -42,7 +42,7 @@ class Category
             $sql = "INSERT INTO categories (name_cat)VALUES('$name')";
             // use exec() because no results are returned
             $conn->exec($sql);
-            echo "New record created successfully";
+//            echo "New record created successfully";
         } catch (PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }
@@ -63,7 +63,7 @@ class Category
             $stmt->execute();
 
             // echo a message to say the UPDATE succeeded
-            echo $stmt->rowCount() . " records UPDATED successfully";
+//            echo $stmt->rowCount() . " records UPDATED successfully";
         } catch (PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }

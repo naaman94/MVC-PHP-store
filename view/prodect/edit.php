@@ -10,14 +10,14 @@ $edit_product = new Product();
 if(isset($_POST["edit_product_id"]))
 {
     $id=$_POST["edit_product_id"];
-    echo $id ."------------------------";
+//    echo $id ."------------------------";
     $data = $edit_product->get_by_id($conn,$id);
     $data= $data[0];
 
 }
 
 if (isset($_POST["id"])) {
-    echo $_POST['id'].$_POST["name"]. $_POST["description"]. $_POST["price"]. $_POST["catigory"];
+//    echo $_POST['id'].$_POST["name"]. $_POST["description"]. $_POST["price"]. $_POST["catigory"];
     $edit_product->edit_prod($_POST['id'],$_POST["name"], $_POST["description"], $_POST["price"], $_POST["catigory"], $conn);
     header('Location: /MVC/view/prodect/index.php');
 

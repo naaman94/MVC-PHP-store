@@ -57,7 +57,7 @@ class Product
         $this->description = $description;
         $this->price = $price;
         $this->category_id = $category_id;
-        echo "you are in create";
+//        echo "you are in create";
         try {
             $sql = "INSERT INTO products (name, description, price, category_id)VALUES('$name','$description',$price,$category_id)";
             // use exec() because no results are returned
@@ -75,7 +75,7 @@ class Product
         $this->description = $description;
         $this->price = $price;
         $this->category_id = $category_id;
-        echo "you are in edit";
+//        echo "you are in edit";
 
         try {
 
@@ -87,7 +87,7 @@ class Product
             $stmt->execute();
 
             // echo a message to say the UPDATE succeeded
-            echo $stmt->rowCount() . " records UPDATED successfully";
+//            echo $stmt->rowCount() . " records UPDATED successfully";
         } catch (PDOException $e) {
             echo $sql . "<br>" . $e->getMessage();
         }

@@ -10,7 +10,7 @@ $new_Category = new Category();
 
 if (isset($_POST["submit"])) {
 //    var_dump($_POST);
-    echo $_POST["name"] ."<br>";
+//    echo $_POST["name"] ."<br>";
     $new_Category->create($_POST["name"], $conn);
     header('Location: /MVC/view/categories/index.php');
 }
